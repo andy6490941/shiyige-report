@@ -15,3 +15,8 @@ tools/.gh_profile/
 tools/.gh_code
 tools/.gh_state
 tools/*.log
+
+# 2026-11-07 会员制上线：报告正文只存云数据库，公开站不再发布任何报告 HTML。
+# 本地 reports/ 是 publish.py 的净化暂存，绝不能再进仓库（防误 push 泄露）。
+reports/
+cloud_staging/

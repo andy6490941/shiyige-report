@@ -1,0 +1,17 @@
+# 🔴 网站仓库只保留对外静态内容：index.html + reports/ + .gitignore
+# 其余本地工具/文档一律不推（Cloudflare Pages 会把整个仓库当静态站发布，
+# 推上去 = 公开发布，含邮箱/托管说明/内部逻辑，绝不能外泄）
+tools/
+README.md
+上线指引_给十一哥.html
+*.log
+*.py
+__pycache__/
+.DS_Store
+
+# 凭据与浏览器会话（双重保险，防止将来 tools/ 解禁时误推）
+tools/config.json
+tools/.gh_profile/
+tools/.gh_code
+tools/.gh_state
+tools/*.log

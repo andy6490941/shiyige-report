@@ -45,18 +45,18 @@ body{margin:0;background:#f4f2f7;color:#1a1a1a;
 .foot{margin:26px 16px 0;padding:16px 4px 0;border-top:1px solid #e2dcea;
  font-size:11.5px;color:#8a8394;line-height:1.9}
 .float{position:fixed;right:16px;bottom:18px;z-index:99;width:220px;
- background:#fff;border:1px solid #e3dcf0;border-radius:12px;
- box-shadow:0 8px 28px rgba(45,25,80,.20);padding:13px 15px 14px;
+ background:#fff;border:2px solid #6741d9;border-radius:14px;
+ box-shadow:0 10px 34px rgba(45,25,80,.30);padding:13px 15px 14px;
  animation:floatIn .45s ease-out}
 .float .t{font-size:13px;font-weight:800;color:#6741d9;padding-right:18px}
 .float .d{font-size:11.5px;color:#5f5869;margin-top:7px;line-height:1.75}
 .float .img{display:block;width:100%;border-radius:8px;margin-top:9px}
 .float .go{display:block;margin-top:10px;padding:8px 0;text-align:center;border-radius:7px;
  background:#6741d9;color:#fff;text-decoration:none;font-size:12px;font-weight:700}
-.float .x{position:absolute;right:9px;top:7px;font-size:17px;line-height:1;color:#b5adbf;
- cursor:pointer;background:none;border:0;padding:2px 4px}
+.float .x{position:absolute;right:7px;top:5px;font-size:19px;line-height:1;color:#8a7a9c;
+ cursor:pointer;background:none;border:0;padding:2px 5px}
 .float .x:hover{color:#6741d9}
-.float .tip{font-size:10px;color:#b5adbf;margin-top:8px;text-align:center}
+.float .tip{font-size:10px;color:#a99fb8;margin-top:8px;text-align:center}
 @keyframes floatIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 .slogan{margin-top:14px;background:linear-gradient(90deg,#ffd166,#ffb020);color:#3b2410;
  font-size:19px;font-weight:900;letter-spacing:1px;text-align:center;padding:10px 12px;
@@ -69,26 +69,32 @@ body{margin:0;background:#f4f2f7;color:#1a1a1a;
 .hero.mini .logo{margin-bottom:0}
 .hero.mini .logo .sitename{font-size:20px}
 .hero.mini .logo svg{width:36px;height:36px}
+/* 2026-11-07 十一哥反馈「漂浮广告没看到」：
+   ① 手机端不再折叠成小胶囊，默认直接展开显示二维码；
+   ② 关闭改为「收起成常驻圆点」，不再按天彻底隐藏，随时能唤回。 */
 .float .fab{display:none}
 .float .panel{display:block}
 .float .qr{display:block;width:148px;height:148px;object-fit:contain;margin:10px auto 0;
  border:1px solid #eee;border-radius:8px;background:#fff}
 .float .wx{text-align:center;font-size:12.5px;color:#4a2c6f;font-weight:800;margin-top:8px;letter-spacing:.3px}
 .float .wx small{display:block;font-size:10px;color:#aaa;font-weight:400;letter-spacing:0;margin-top:3px}
+.float.mini{width:auto;padding:0;border:0;background:transparent;box-shadow:none;right:14px;bottom:14px}
+.float.mini .panel{display:none}
+.float.mini .fab{display:block;width:52px;height:52px;border-radius:50%;font-size:21px;
+ background:#6741d9;color:#fff;border:0;cursor:pointer;
+ box-shadow:0 6px 22px rgba(103,65,217,.55)}
 @media(max-width:640px){
- .float{left:auto;right:10px;bottom:10px;width:auto;padding:0;background:transparent;border:0;box-shadow:none}
- .float .panel{display:none;background:#fff;border:1px solid #e3dcf0;border-radius:12px;
-  box-shadow:0 8px 28px rgba(45,25,80,.20);padding:11px 14px 12px}
- .float .fab{display:block;padding:10px 15px;background:#6741d9;color:#fff;border:0;
-  border-radius:999px;font-size:12px;font-weight:700;box-shadow:0 5px 16px rgba(103,65,217,.38)}
- .float:not(.open) .x{display:none}
- .float.open{left:10px;right:10px;width:auto}
- .float.open .fab{display:none}
- .float.open .panel{display:block}
- .float .qr{width:126px;height:126px;margin-top:8px}
- .float .tip{display:none}
- .float .d{font-size:11px;line-height:1.55}
- .wrap{padding-bottom:76px}
+ .float{right:10px;bottom:10px;width:158px;padding:10px 11px 11px;border-radius:12px}
+ .float .qr{width:118px;height:118px;margin-top:7px}
+ .float .t{font-size:12px}
+ .float .d{font-size:10.5px;line-height:1.5;margin-top:5px}
+ .float .wx{font-size:11px;margin-top:6px}
+ .float .wx small{font-size:9px}
+ .float .tip{font-size:9px;margin-top:6px}
+ .float .x{right:4px;top:2px;font-size:17px}
+ .float.mini{width:auto;padding:0;border:0;right:12px;bottom:12px}
+ .float.mini .fab{width:46px;height:46px;font-size:18px}
+ .wrap{padding-bottom:110px}
 }
 </style></head><body>
 <div class="wrap">
@@ -213,4 +219,15 @@ body{margin:0;background:#f4f2f7;color:#1a1a1a;
 </tr>
 </table></div>
 <div class="foot">以上分析仅供参考，不构成投资建议。市场有风险，投资需谨慎。<br>页面同步：2026-11-07　·　<a href="index.html" style="color:#6741d9">返回今日</a></div>
+<div class="float" id="floatNote">
+<button class="fab" type="button" aria-label="展开联系站长">📱</button>
+<div class="panel">
+<button class="x" type="button" aria-label="收起">×</button>
+<div class="t">📱 联系站长</div>
+<div class="d">每日三份市场简报免费公开。扫码交流市场观点、获取研报更新提醒。</div>
+<img class="qr" src="assets/wechat_qr.jpg" alt="站长微信二维码">
+<div class="wx">微信号：yulujiaoyu168<small>长按二维码识别，或搜索微信号添加</small></div>
+<div class="tip">点 × 收起 · 点 📱 再展开</div>
+</div></div>
+<script>(function(){var e=document.getElementById("floatNote");if(!e)return;var x=e.querySelector(".x"),f=e.querySelector(".fab");if(x)x.onclick=function(){e.classList.add("mini")};if(f)f.onclick=function(){e.classList.remove("mini")};})();</script>
 </div></body></html>
